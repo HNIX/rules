@@ -1,4 +1,4 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 # Declare your gem's dependencies in rules.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
@@ -6,18 +6,19 @@ source "http://rubygems.org"
 gemspec
 
 # jquery-rails is used by the dummy application
-gem "activeadmin", '1.0.0.pre2'
+gem "activeadmin", '2.0.0' # Update to a compatible version with Rails 7
 gem "coffee-rails"
-gem 'devise', '~> 3.2'
+gem 'devise', '~> 4.8' # Update to a compatible version
 gem "formtastic"
 gem "haml"
 gem "jquery-rails"
 gem "sass-rails"
-gem "rails", '~> 4.1.0'
+gem "rails", '~> 7.0' # Update to Rails 7
 
+# Use the sqlite3 gem for SQLite on all platforms
 gem "sqlite3", platforms: [:ruby, :mswin, :mingw]
 
-# for JRuby
+# For JRuby, use the jdbc-sqlite3 gem
 gem "jdbc-sqlite3", platforms: :jruby
 
 # Declare any dependencies that are still in development here instead of in

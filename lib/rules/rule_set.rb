@@ -3,7 +3,7 @@ require 'rules/parameters/attribute'
 
 module Rules
   class RuleSet < ActiveRecord::Base
-    belongs_to :source, polymorphic: true
+    belongs_to :rule_source, polymorphic: true
 
     has_many :rules, class_name: 'Rules::Rule'
 
@@ -30,7 +30,7 @@ module Rules
     end
 
     def attributes
-      source_klass = source ? source.class : source_type.try(:constantize)
+      source_klass = rule_source ? rule_source.class : rule_source_type.try(:constantize)
       return {} unless source_klass
       self.class.attributes[source_klass]
     end

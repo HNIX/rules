@@ -12,6 +12,4 @@ script:
   - bundle exec rspec
 
 gemfile:
-  - Gemfile-rails-4.0.x
-  - Gemfile-rails-4.1.x
-  - Gemfile-rails-4.2.x
+  - Gemfile-rails-7.0.x
